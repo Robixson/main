@@ -1,0 +1,304 @@
+/* --- RESET --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+body {
+  background: linear-gradient(180deg, #111, #222);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* --- NAGŁÓWEK --- */
+header {
+  background-color: #181818;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+header h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #ff0000;
+  text-shadow: 0 0 15px red;
+  font-weight: bold;
+  margin-left: 70px;
+}
+
+/* --- MENU --- */
+nav {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+}
+
+/* Ukrywamy listę na start */
+nav ul {
+  list-style: none;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.95);
+  position: absolute;
+  right: 0;
+  top: 40px;
+  width: 200px;
+  border: 1px solid red;
+  border-radius: 8px;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+nav ul li {
+  text-align: center;
+  margin: 5px 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: red;
+  color: black;
+  border-radius: 5px;
+}
+
+/* --- PRZYCISK MENU (hamburger) --- */
+nav::before {
+  content: "☰";
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+nav:hover::before {
+  color: red;
+}
+
+/* Pokazuje menu po najechaniu */
+nav:hover ul {
+  display: flex;
+}
+
+/* --- GŁÓWNA CZĘŚĆ --- */
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+/* --- SEKCJE --- */
+section {
+  background-color: rgba(255, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 15px;
+  width: clamp(250px, 30%, 600px); /* szerokosc rośnie płynnie */
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  overflow-y: auto;
+  max-height: 400px;
+  margin-inline: auto; /* automatyczne wyśrodkowanie */
+  transition: width 0.3s ease, margin 0.3s ease; /* płynne skalowanie */
+}
+
+section h2{
+  background-color: rgba(255, 255, 255, 0.2);
+  border:2px dashed black;
+  border-radius: 90px;
+}
+
+/* --- TEKST W SEKCJI --- */
+section h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  text-align: center;
+  color: white;
+}
+
+section p {
+  margin-bottom: 10px;
+  padding: 8px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+}
+
+section h2 img {
+  display: block;
+  margin: 0 auto 15px auto;
+  width: 400px;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+section .content img {
+  display: block;
+  margin: 10px auto;
+  height: 180px;
+  border-radius: 8px;
+}
+
+img {
+  max-width: 100%;
+  height: 125px;
+}
+
+#SG2, #Nick {
+  height: 200px;
+}
+
+#zdjtarcza {
+  width: 125px;
+}
+
+/* --- ROZWIJANE SEKCJE --- */
+#avengers input[type="checkbox"],
+#SG input[type="checkbox"],
+#tarcza input[type="checkbox"] {
+  display: none;
+}
+
+.image-label {
+  display: block;
+  cursor: pointer;
+  text-align: center;
+}
+
+section .content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  margin-top: 10px;
+}
+
+section input[type="checkbox"]:checked ~ .content {
+  max-height: 1000px;
+}
+
+/* --- STOPKA --- */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* === RESPONSYWNOŚĆ === */
+
+/* TABLETY (do 1024px) */
+@media (max-width: 1024px) {
+  header h1 {
+      font-size: 24px;
+      margin-left: 0;
+  }
+
+  nav {
+      right: 15px;
+      top: 15px;
+  }
+
+  section {
+      width: 60%;
+      margin: 20px auto;
+      margin-left: auto;
+  }
+
+  section h2 img {
+      width: 90%;
+      height: auto;
+  }
+}
+
+/* TELEFONY (do 768px) */
+@media (max-width: 768px) {
+  header {
+      padding: 15px;
+  }
+
+  header h1 {
+      font-size: 20px;
+      margin-left: 0;
+  }
+
+  nav {
+      top: 10px;
+      right: 15px;
+  }
+
+  nav::before {
+      text-align: right;
+      font-size: 28px;
+  }
+
+  nav ul {
+      top: 40px;
+      right: 0;
+      width: 180px;
+      border-radius: 10px;
+  }
+
+  section {
+      width: 85%;
+      margin: 15px auto;
+      margin-left: auto;
+  }
+
+  section img {
+      max-width: 100%;
+      height: auto;
+  }
+
+  footer {
+      font-size: 12px;
+      padding: 10px;
+  }
+}
+
+/* BARDZO MAŁE EKRANY (do 480px) */
+@media (max-width: 480px) {
+  header h1 {
+      font-size: 18px;
+  }
+
+  nav::before {
+      font-size: 26px;
+  }
+
+  nav ul li a {
+      padding: 8px;
+      font-size: 14px;
+  }
+
+  section {
+      width: 90%;
+      margin: 10px auto;
+  }
+
+  section h3 {
+      font-size: 18px;
+  }
+
+  section p {
+      font-size: 13px;
+  }
+}
