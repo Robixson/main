@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="skrypt.js">
+</head>
+<body>
+    <p id="title">Lista Zadań</p>
+    <div id="ramka">
+        <!-- Wyszukiwarka -->
+        <div>
+            <input type="text" id="szukaj" placeholder="Szukaj" oninput="searchTasks()">
+        </div>
+        
+        <!-- Lista zadań (wstępnie wypełniona) -->
+        <div id="task-list">
+            <!-- Zadanie 1 -->
+            <div class="task">
+                <input type="checkbox">
+                <p class="task-text">Spacer</p>
+                <p class="task-date">20.01.2025</p>
+                <button class="delete-btn"><img src="Images/dustbin_3569930.png" alt="Usuń"></button>
+            </div>
+        </div>
+
+        <!-- Formularz dodawania zadania -->
+        <div>
+            <input type="text" id="text" placeholder="Dodaj nowe zadanie">
+            <input type="date" id="data">
+            <button onclick="addTask()">Dodaj zadanie</button>
+        </div>
+    </div>
+
+    <script src="skrypt.js"></script>
+</body>
+</html>

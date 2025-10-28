@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image: url("Images/Tło2.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#title {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    font-size: 30px;
+    padding: 15px;
+    margin: 15px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 2px solid black;
+    border-radius: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#ramka {
+    background-image: url(Images/Zad.jpg);
+    width: 40%; /* Zmniejszenie szerokości sekcji */
+    padding: 15px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#szukaj {
+    width: 80%;
+    margin: 10px 80px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#task-list {
+    margin-top: 20px;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Zapewniam, że zadanie będzie miało pełną szerokość w ramach kontenera */
+}
+
+.task-text {
+    flex-grow: 1;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.task-date {
+    font-size: 0.9em;
+    color: #888;
+    padding: 20px;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.delete-btn img {
+    width: 20px; /* Zmniejszenie obrazka kosza */
+    height: 20px; /* Zachowanie proporcji obrazka */
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    margin: 10px 20px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+input[type="text"], input[type="date"] {
+    padding: 8px;
+    margin: 5px 5px;
+    width: 40%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="text"]:focus, input[type="date"]:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.highlight {
+    background-color: yellow;
+}
