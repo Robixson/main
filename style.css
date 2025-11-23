@@ -1,0 +1,162 @@
+body{
+    background-image:url(Image/Tło.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#weather-app{
+    background-color: rgb(190,195 ,204,0.6);
+    width: 90%; 
+    max-width: 400px; 
+    margin: 10px;
+    padding: 1px;
+    border: 2px black solid;
+    border-radius: 50px;
+     text-align: center;
+    }
+
+h1{
+ font-size: 30px;
+}
+
+input{
+    width: 60%;
+    height: 10px;
+    border: 2px black solid;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+#SPR{
+    border: 2px black solid;
+    border-radius: 30px;
+    font-size: 15px;
+    margin: 15px;
+    padding: 10px;
+    background-color: rgb(135, 206, 235);
+    color:white;
+    cursor: pointer;
+}
+
+#SPR:hover{
+    scale: 110%;
+}
+
+
+#pogoda-biezaca {
+    width: 80%; 
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 35px;
+    text-align: center;
+    border: 1px solid #aaa;
+}
+
+.current-details {
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.current-details p {
+    font-size: 24px;
+}
+
+
+#pogoda-jutro-pojutrze {
+    width: 85%; 
+    margin-top: 30px;
+    text-align: center;
+}
+
+#jutro, #pojutrze {
+    background-color: rgba(240, 240, 240, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 35px;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Właściwy układ i przewijanie dla wiersza godzinowego */
+.hourly-grid {
+    display: flex;
+    justify-content:flex-start;
+    overflow-x: auto; 
+    padding: 20px;
+    gap: 15px;
+}
+
+/* Styl pojedynczego elementu prognozy */
+.hourly-item {
+    min-width: 100px; 
+    flex-shrink: 0;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.hourly-item p {
+    margin: 3px 0;
+    font-size: 20px;
+}
+.hourly-item .description {
+    font-size: 12px;
+    margin-top: 5px;
+}
+.hourly-item strong {
+    font-size: 16px;
+}
+.error-msg {
+    color: red;
+    font-weight: bold;
+}
+
+/* --- Media Query: Centrowanie na większych ekranach --- */
+@media (min-width: 1470px) {
+    
+    #weather-app {
+        width: 300px; 
+    }
+
+    
+    #pogoda-biezaca {
+        width: 500px; 
+    }
+    #pogoda-jutro-pojutrze {
+        width: 90%;
+    }
+    
+   
+    .hourly-grid {
+        justify-content: center;
+        overflow-x: auto; 
+    }
+}
+
+@media (max-width: 600px) {
+    
+    .current-details {
+        flex-direction: column; 
+    }
+    
+    #weather-app input {
+        width: 80%;
+    }
+    #pogoda-biezaca {
+        width: 90%;
+    }
+}

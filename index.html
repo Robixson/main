@@ -1,86 +1,26 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MARVEL HEROES</title>
- <script src="https://wi.arturk.pl/zen-style.js.php?styles[]=style-1&styles[]=style-2" defer></script> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pogodynka</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+ <div id="weather-app">
+ <h1>Sprawdź Pogode</h1>
+<input type="text" id="city-input" placeholder="Wpisz Miejscowość">
+ <br>
+ <button id="SPR">SZUKAJ</button>
+</div>
+    
+<div id="pogoda-biezaca"></div> 
 
-    <header>
-          <h1>BohaterowieMarvela</h1>
-          <nav>
-            <ul>
-              <li><a href="index.html">Strona Główna</a></li>
-              <li><a href="QUIZ.html">Bohaterem Jesteś? QUIZ</a></li>
-              <li><a href="baza.html">Seriale i Filmy Marvela</a></li>
-              <li><a href="opinie.html">Wasze Opinie</a></li>
-            </ul>
-          </nav>
-      </header>
+<div id="pogoda-jutro-pojutrze"> 
+    <div id="jutro"></div> 
+    <div id="pojutrze"></div> 
+</div>
 
-  <main>
-
-    <section id="avengers">
-        <input type="checkbox" id="toggle-avengers">
-        <label for="toggle-avengers" class="image-label">
-         <h2><img src="images/Marvel_avengers.webp" alt="Avengers"></h2>
-        </label>
-      
-        <div class="content">
-          <h3>Kapitan Ameryka</h3>
-          <img src="images/Kapitan Ameryka.webp" alt="" id=" hero">
-          <p>Kapitan Ameryka, czyli Steve Rogers, to postać komiksowa i filmowa, stworzona przez Joe Simona i Jacka Kirby'ego w 1941 roku. Jest to weteran II wojny światowej, który po otrzymaniu "serum superżołnierza" zyskał szczyt ludzkiej sprawności fizycznej i stał się symbolem amerykańskiego patriotyzmu. Jego głównym atrybutem jest tarcza wykonana z vibranium.</p>
-      
-          <h3>Iron Man</h3>
-          <img src="images/Iron man.webp" alt="" id="hero">
-          <p>Tony Stark, znany jako Iron Man, to genialny wynalazca i miliarder, który wykorzystuje swoje technologiczne zbroje, by walczyć ze złem. Jest on współzałożycielem Avengers, a jego firma Stark Industries dostarcza nowoczesne technologie.</p>
-      
-          <h3>Thor</h3>
-          <img src="images/Thor.png" alt="" id="hero">
-          <p>Thor, Bóg Piorunów, syn Odyna z Asgardu. Posiada młot Mjöllnir, kontroluje pioruny i jest jednym z założycieli Mścicieli.</p>
-        </div>
-      </section>
-      
-    <section id="SG">
-        <input type="checkbox" id="toggle-SG">
-        <label for="toggle-SG" class="image-label">
-          <h2><img src="images/Strażnicy.webp" alt="Strażnicy Galaktyki"></h2>
-        </label>
-      <div class = "content">
-        <h3>Groot</h3>
-        <img src="https://pngimg.com/uploads/groot/groot_PNG68.png" alt="" id="SG2">
-        <p>Groot to drzewny stwór z kosmosu, potrafi zmieniać kształt i kontrolować rośliny. Znany z frazy "Jestem Groot".</p>
-        <h3>Drax</h3>
-        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5b8d2b12-21e8-4931-8a6d-fb9ecdd60383/dc8dxs0-060d34b5-c3f9-43da-a0de-0eac4df0b95b.png/v1/fill/w_767,h_1042/avengers_infinity_war_drax_png_by_metropolis_hero1125_dc8dxs0-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA1OSIsInBhdGgiOiIvZi81YjhkMmIxMi0yMWU4LTQ5MzEtOGE2ZC1mYjllY2RkNjAzODMvZGM4ZHhzMC0wNjBkMzRiNS1jM2Y5LTQzZGEtYTBkZS0wZWFjNGRmMGI5NWIucG5nIiwid2lkdGgiOiI8PTc3OSJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.ZToH7afSQSQlzDJPB_mM9f-jUGs1y4f3qYegsVdImgY" alt="" id="SG2">
-        <p>Drax Niszczyciel to potężny wojownik, pragnący zemsty na Thanosie. Cechuje go ogromna siła i dosłowne rozumienie świata.</p>
-      </div>
-    </section>
-
-    <section id="tarcza">
-        <input type="checkbox" id="toggle-tarcza">
-        <label for="toggle-tarcza" class="image-label">
-         <h2><img src="images/tarcza.webp" id="zdjtarcza" alt="Tarcza"></h2>
-        </label>
-        <div class="content">
-          <h3>Nick Fury</h3>
-          <img src="https://static.wikia.nocookie.net/murderseries/images/4/46/Fury.png/revision/latest?cb=20150303020714" alt="" id="Nick">
-          <p>Były oficer armii Stanów Zjednoczonych, szpieg CIA i były dyrektor T.A.R.C.Z.Y.</p>
-        </div>
-      </section>
-
-  </main>
-
- 
-  <footer>Strona Stworzona przez Robert Półtorak</footer>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const nav = document.querySelector("nav");
-      nav.addEventListener("click", () => {
-        nav.classList.toggle("active");
-      });
-    });
-    </script>
+ <script src="skrypt.js"></script>
 </body>
 </html>
