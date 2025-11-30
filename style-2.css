@@ -302,3 +302,38 @@ footer {
       font-size: 13px;
   }
 }
+
+#style-links-container {
+    background-color: rgba(51, 51, 51, 0.9); 
+    color: white;
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    text-align: center;
+}
+
+#style-links-container h3 {
+    color: white; 
+    margin-bottom: 15px;
+  }
+
+
+.style-link-item {
+    color: #ff0000; 
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 5px 0; 
+    border: 1px solid #ff0000;
+    border-radius: 40px;
+    transition: background-color 0.3s, color 0.3s;
+    width: 200px; 
+    font-size: 18px;
+    display: block; 
+}
+
+.style-link-item:hover {
+    background-color: #ff0000;
+    color: #ffffff;
+}

@@ -9,12 +9,11 @@
   }
   
   body {
-    background-image: url("images/tło2.jpg");
+    background-color: rgb(255, 0, 0,0.9);
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* tło zawsze przyklejone do okna */
+    background-attachment: fixed; 
     background-size: cover;
-    background-color: black; /* awaryjne tło, gdy obraz się nie wczyta */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -304,7 +303,7 @@ header {
 .style-link-item {
     color: #ff0000; 
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 10px 10px;
     margin: 5px 0; 
     border: 1px solid #ff0000;
     border-radius: 40px;

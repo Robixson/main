@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MARVEL HEROES</title>
- <script src="https://wi.arturk.pl/zen-style.js.php?styles[]=style-1&styles[]=style-2" defer></script> 
-</head>
+ <!-- <script src="https://wi.arturk.pl/zen-style.js.php?styles[]=style-1&styles[]=style-2" defer></script> -->
+  <script src="src/script.ts" type="module" defer></script>
 <body>
 
     <header>
@@ -65,7 +65,7 @@
         </label>
         <div class="content">
           <h3>Nick Fury</h3>
-          <img src="https://static.wikia.nocookie.net/murderseries/images/4/46/Fury.png/revision/latest?cb=20150303020714" alt="" id="Nick">
+          <img src="images/fury.png" alt="" id="Nick">
           <p>Były oficer armii Stanów Zjednoczonych, szpieg CIA i były dyrektor T.A.R.C.Z.Y.</p>
         </div>
       </section>
@@ -74,13 +74,6 @@
 
  
   <footer>Strona Stworzona przez Robert Półtorak</footer>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const nav = document.querySelector("nav");
-      nav.addEventListener("click", () => {
-        nav.classList.toggle("active");
-      });
-    });
-    </script>
+    <div id="style-links-container"></div>
 </body>
 </html>
